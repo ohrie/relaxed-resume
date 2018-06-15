@@ -1,0 +1,191 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono:300,400,700');
+
+$position-top: 30mm;
+$page_width: 210mm;
+$page_height: 297mm;
+$page-side-padding: 2cm;
+$right-margin: 65mm;
+
+@page {
+  size: $page_width $page_height;
+  -relaxed-page-width: $page_width;
+  -relaxed-page-height: $page_height;
+}
+
+html{
+  font-family: 'Roboto', sans-serif;
+  font-size: 12pt;
+  margin: 0;
+  background: #6a6a6a;
+}
+
+body {
+  margin: 0;
+}
+
+.content {
+  overflow: hidden;
+  width: $page_width;
+  height: $page_height;
+  padding: $page-side-padding;
+  padding-left: $page-side-padding + 8mm;
+  box-sizing: border-box;
+}
+
+.head{
+  position: relative;
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: -1px;
+
+  .name {
+    font-size:  1.5cm;
+
+    &:after{
+      content: ',';
+      color: red;
+    }
+  }
+  .left, .right{
+    top: $position-top;
+
+    i {
+      width: 1em;
+      text-align: center;
+    }
+  }
+  .left {
+    position: absolute;
+  }
+  .right {
+    left: $right-margin;
+    position: absolute;
+  }
+  .work {
+    margin-top: -2mm;
+  }
+}
+
+.divider {
+  position: absolute;
+  background: orange;
+  top: -45mm;
+  left: -40mm;
+  width: 300mm;
+  height: 110mm;
+  transform: rotate(-7deg);
+  z-index: -5;
+}
+
+.rows {
+  display: flex;
+  flex-wrap: nowrap;
+
+  .left {
+    flex-basis: 58%;
+  }
+}
+
+
+.projects, .education, .hobbys, .skills {
+
+  position: relative;
+  top: 65mm;
+  color: white;
+
+  h2{
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.7mm;
+    font-weight: 700;
+    font-size: 155%;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .place, .fa {
+    &:before{
+      color: orange;
+    }
+  }
+}
+
+.projects {
+  .project {
+    margin-bottom: 5mm;
+    max-width: 80%;
+  }
+  .place {
+    padding: 1mm 0 0 2mm;
+
+    &:before {
+      font-family: FontAwesome;
+      content: '\f275';
+      margin-right: 2mm;
+    }
+  }
+}
+
+.education {
+  li{
+    margin-bottom: 5mm;
+
+    &:nth-child(2){
+      .time{
+        top: 25mm;
+        left: -20mm;
+        width: 29mm;
+        height: 1.4em;
+      }
+    }
+    &:nth-child(3){
+      margin-top: 12mm;
+
+      .time{
+        top: 56mm;
+        left: -16mm;
+        width: 21mm;
+        height: 1.4em;
+      }
+    }
+
+    .time {
+      border-bottom: 0.5mm solid orange;
+      transform: rotate(-90deg);
+      position: absolute;
+      text-align: center;
+    }
+  }
+
+  .place {
+    padding: 1mm 0 0 2mm;
+
+    &:before {
+      font-family: FontAwesome;
+      content: '\f041';
+      margin-right: 2mm;
+    }
+  }
+}
+
+.hobbys {
+  li{
+    margin-top: 1mm;
+
+    i {
+      font-size: 18pt;
+    }
+    span {
+      position: absolute;
+      left: 10mm;
+    }
+  }
+}
+
+.skills {
+  .fa{
+    margin-right: 2mm;
+  }
+}

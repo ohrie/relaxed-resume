@@ -1,0 +1,131 @@
+
+    <html>
+      <head>  </head>
+      <body> <div class="content"><div class="head"><div class="divider"></div><div class="name">I'm Karl Otto</div><div class="work">design student.</div><div class="left"><div class="website"><i class="fa fa-safari"></i> www.mermaid.app</div><div class="mail"><i class="fa fa-envelope"></i> karl@mermaid.app</div><div class="phone"><i class="fa fa-phone"></i> 0161/5498724</div><div class="twitter"><i class="fa fa-twitter-square"></i> @otti</div></div><div class="right"><div class="age"><i class="fa fa-user-circle"></i> 25 years old</div><div class="hometown"><i class="fa fa-globe"></i> From Berlin, Germany</div><div class="place"><i class="fa fa-map-marker"></i> Located in Hamburg</div></div></div><div class="rows"><div class="left"><div class="projects"> <h2>Projects</h2><div class="project">WordPress Landingpage<div class="place">Deutsche Bahn AG</div></div><div class="project">Designed Clients flyer<div class="place">Home24 GmbH</div></div></div><div class="education"><h2>Education</h2><ul><li>Highschool<div class="place">Karl-Theodor Highschool, Berlin</div></li><li>3-year Vocational College<div class="place">Design School of Berlin</div><div class="time">2015-2007</div></li><li>Studying Design<div class="place">University of Berlin</div><div class="time">now-2015</div></li></ul></div></div><div class="right"><div class="hobbys"><h2>Hobbies</h2><ul><li><i class="fa fa-wikipedia-w"></i> <span>Wikipedia</span></li><li><i class="fa fa-trophy"></i> <span>Tennis</span></li></ul></div><div class="skills"><h2>Skills</h2><ul><li><i class="fa fa-battery-quarter"></i> LaTeX</li><li><i class="fa fa-battery-three-quarters"></i> HTML & CSS </li><li><i class="fa fa-battery-quarter"></i> SCSS, jQuery</li><li><i class="fa fa-battery-half"></i> NodeJS</li><li><i class="fa fa-battery-quarter"></i> SQL</li><li><i class="fa fa-battery-quarter"></i> Grav CMS</li><li><i class="fa fa-battery-quarter"></i> WordPress </li></ul></div></div></div></div><style>@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono:300,400,700");
+@page {
+  size: 210mm 297mm;
+  -relaxed-page-width: 210mm;
+  -relaxed-page-height: 297mm; }
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12pt;
+  margin: 0;
+  background: #6a6a6a; }
+
+body {
+  margin: 0; }
+
+.content {
+  overflow: hidden;
+  width: 210mm;
+  height: 297mm;
+  padding: 2cm;
+  padding-left: 2.8cm;
+  box-sizing: border-box; }
+
+.head {
+  position: relative;
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: -1px; }
+  .head .name {
+    font-size: 1.5cm; }
+    .head .name:after {
+      content: ',';
+      color: red; }
+  .head .left, .head .right {
+    top: 30mm; }
+    .head .left i, .head .right i {
+      width: 1em;
+      text-align: center; }
+  .head .left {
+    position: absolute; }
+  .head .right {
+    left: 65mm;
+    position: absolute; }
+  .head .work {
+    margin-top: -2mm; }
+
+.divider {
+  position: absolute;
+  background: orange;
+  top: -45mm;
+  left: -40mm;
+  width: 300mm;
+  height: 110mm;
+  transform: rotate(-7deg);
+  z-index: -5; }
+
+.rows {
+  display: flex;
+  flex-wrap: nowrap; }
+  .rows .left {
+    flex-basis: 58%; }
+
+.projects, .education, .hobbys, .skills {
+  position: relative;
+  top: 65mm;
+  color: white; }
+  .projects h2, .education h2, .hobbys h2, .skills h2 {
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.7mm;
+    font-weight: 700;
+    font-size: 155%; }
+  .projects ul, .education ul, .hobbys ul, .skills ul {
+    list-style: none;
+    padding: 0; }
+  .projects .place:before, .projects .fa:before, .education .place:before, .education .fa:before, .hobbys .place:before, .hobbys .fa:before, .skills .place:before, .skills .fa:before {
+    color: orange; }
+
+.projects .project {
+  margin-bottom: 5mm;
+  max-width: 80%; }
+
+.projects .place {
+  padding: 1mm 0 0 2mm; }
+  .projects .place:before {
+    font-family: FontAwesome;
+    content: '\f275';
+    margin-right: 2mm; }
+
+.education li {
+  margin-bottom: 5mm; }
+  .education li:nth-child(2) .time {
+    top: 25mm;
+    left: -20mm;
+    width: 29mm;
+    height: 1.4em; }
+  .education li:nth-child(3) {
+    margin-top: 12mm; }
+    .education li:nth-child(3) .time {
+      top: 56mm;
+      left: -16mm;
+      width: 21mm;
+      height: 1.4em; }
+  .education li .time {
+    border-bottom: 0.5mm solid orange;
+    transform: rotate(-90deg);
+    position: absolute;
+    text-align: center; }
+
+.education .place {
+  padding: 1mm 0 0 2mm; }
+  .education .place:before {
+    font-family: FontAwesome;
+    content: '\f041';
+    margin-right: 2mm; }
+
+.hobbys li {
+  margin-top: 1mm; }
+  .hobbys li i {
+    font-size: 18pt; }
+  .hobbys li span {
+    position: absolute;
+    left: 10mm; }
+
+.skills .fa {
+  margin-right: 2mm; }
+</style> </body>
+    </html>
