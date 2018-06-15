@@ -3,7 +3,7 @@
 This is an experiment using the new RelaxedJS.
 I designed a curriculum vitae.
 
-![Example](example.png)
+<img src="example.png" width="400">
 
 ## Installation
 You need [RelaxedJS](https://github.com/RelaxedJS/ReLaXed), nodeJS, npm.
