@@ -22,3 +22,6 @@ pug is a shorthand for HTML.
 * SCSS
 
 That's it.
+
+## License
+Licensed under GLWT Public [License](LICENSE).
