@@ -1,6 +1,14 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono:300,400,700');
 
+/* ACCENTS */
+$comma-color: red;
+$bg-content: orange;
+$bg-head: #191e2b;
+$font-color-head: black;
+$font-color-content: white;
+
+/*VARIABLES*/
 $position-top: 30mm;
 $page_width: 210mm;
 $page_height: 297mm;
@@ -17,11 +25,15 @@ html{
   font-family: 'Roboto', sans-serif;
   font-size: 12pt;
   margin: 0;
-  background: #6a6a6a;
+  background: $bg-head;
 }
 
 body {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .content {
@@ -43,7 +55,7 @@ body {
 
     &:after{
       content: ',';
-      color: red;
+      color: $comma-color;
     }
   }
   .left, .right{
@@ -52,6 +64,10 @@ body {
     i {
       width: 1em;
       text-align: center;
+    }
+    a, div {
+      display: block;
+      color: $font-color-head;
     }
   }
   .left {
@@ -68,7 +84,7 @@ body {
 
 .divider {
   position: absolute;
-  background: orange;
+  background: $bg-content;
   top: -45mm;
   left: -40mm;
   width: 300mm;
@@ -82,7 +98,10 @@ body {
   flex-wrap: nowrap;
 
   .left {
-    flex-basis: 58%;
+    flex-basis: 62%;
+  }
+  .right {
+    flex-basis: 38%;
   }
 }
 
@@ -91,7 +110,7 @@ body {
 
   position: relative;
   top: 65mm;
-  color: white;
+  color: $font-color-content;
 
   h2{
     text-transform: uppercase;
@@ -105,9 +124,15 @@ body {
     padding: 0;
   }
 
-  .place, .fa {
+  a {
+    display: block;
+    color: $font-color-content;
+    text-decoration: none;
+  }
+
+  .place, .lang, .fa {
     &:before{
-      color: orange;
+      color: $bg-content;
     }
   }
 }
@@ -126,6 +151,14 @@ body {
       margin-right: 2mm;
     }
   }
+  .lang {
+    padding: 1mm 0 0 2mm;
+    &:before {
+      font-family: FontAwesome;
+      content: '\f121';
+      margin-right: 2mm;
+    }
+  }
 }
 
 .education {
@@ -141,7 +174,7 @@ body {
       }
     }
     &:nth-child(3){
-      margin-top: 12mm;
+      margin-top: 10mm;
 
       .time{
         top: 56mm;
@@ -152,7 +185,7 @@ body {
     }
 
     .time {
-      border-bottom: 0.5mm solid orange;
+      border-bottom: 0.5mm solid $bg-content;
       transform: rotate(-90deg);
       position: absolute;
       text-align: center;
@@ -172,7 +205,7 @@ body {
 
 .hobbys {
   li{
-    margin-top: 1mm;
+    margin-top: 2.5mm;
 
     i {
       font-size: 18pt;
